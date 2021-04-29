@@ -23,7 +23,7 @@ export const Content = styled.div`
     h1 {
       margin-bottom: 24px;
     }
-    input {
+    /* input {
       background: #232129;
       color: #f4ede8;
       border-radius: 10px;
@@ -36,8 +36,8 @@ export const Content = styled.div`
       & + input { // todo input que seja precedido de outro
         margin-top: 8px;
       }
-    }
-    button {
+    } */
+    /* button {
       background: #ff9000;
       height: 56px;
       border-radius: 10px;
@@ -51,8 +51,8 @@ export const Content = styled.div`
       &:hover {
         background: ${shade(0.2, '#ff9000')};
       }
-    }
-    a {
+    } */
+    a { // pegando somente o a dentro do form
       color: #f4ede8;
       display: block;
       margin-top: 24px;
@@ -63,7 +63,7 @@ export const Content = styled.div`
       }
     }
   }
-  > a {
+  > a { // pegando somente o a do content e não os níveis abaixo (no caso não pega o a do form que é um nível acima.)
     color: #ff9000;
     display: block;
     margin-top: 24px;
