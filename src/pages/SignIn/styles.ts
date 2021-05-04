@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished'; // manipulação de cores
 
 import signInBackground from '../../assets/sign-in-background.png';
@@ -13,9 +13,29 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  place-content: center; // pega os elementos e fica no centro eixo vertical e horizontal
+  justify-content: center; // pega os elementos e fica no centro eixo vertical e horizontal
   width: 100%; // ocupar o máximo da tela possível
-  max-width: 700px;  // nunca ocupar mais que 700px
+  max-width: 700px;
+`;
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ${appearFromLeft} 1s;
+   // nunca ocupar mais que 700px
   form {
     margin: 80px 0;
     width: 340px;
